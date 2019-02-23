@@ -2,16 +2,16 @@ alias sudo='sudo '
 alias nn='nano -ASlw'
 alias rm='rm -i'
 alias yinf='function _yinf(){
-                            for arg in "$@"
-                            do
-                              yaourt -Qi "$arg";
-                              yaourt -Ssi "$arg";
-                              yaourt -Fs --color always "$arg";
-                              read -n 1 -p "--Press any key--";
-                              echo -e "\r\033[K";
-                            done
-                            };
-                            _yinf'
+    for arg in "$@"
+        do
+            yaourt -Qi "$arg";
+            yaourt -Ssi "$arg";
+            yaourt -Fs --color always "$arg";
+            read -n 1 -p "--Press any key--";
+            echo -e "\r\033[K";
+        done
+    };
+    _yinf'
 alias cd='function _cd(){
                         builtin cd "$*" && ll;
                         };
